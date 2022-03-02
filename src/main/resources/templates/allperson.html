@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Document</title>
+</head>
+<body>
+<h1>All Person Page </h1>
+ <table style="border : 1px solid black" >
+  <tbody>
+   <tr th:each="person : ${allperson}"> 
+    <td th:text="${person.id}"></td>
+    <td th:text="${person.firstName}"></td>
+    <td th:text="${person.lastName}"></td>
+    <td>
+     <span th:if="${person.Gender}=='M'" th:text="Male"></span>
+     <span th:unless = "${person.Gender} == 'M'" th:text="Female"></span>
+   </td>
+  </tr>
+  </tbody>
+ </table>
+ 
+</body>
+</html>

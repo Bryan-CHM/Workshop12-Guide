@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org/">
+<head>
+ <meta charset="UTF-8">
+ <meta http-equiv="X-UA-Compatible" content="IE=edge">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Document</title>
+</head>
+<body>
+ <h1>Person Page</h1>
+
+ <p th:text="${person.id}"></p>
+ <p th:text="${person.firstName}"></p>
+ <p th:text="${person.lastName}"></p>
+ <p th:text="${person.Gender}"></p>
+
+ <table style="border: 1px solid black">
+  <tr>
+   <td th:text="${person.id}"></td>
+   <td th:text="${person.firstName}"></td>
+   <td th:text="${person.lastName}"></td>
+   <td th:text="${person.Gender}"></td>
+  </tr>
+ </table>
+ 
+</body>
+</html>
